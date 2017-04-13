@@ -24,7 +24,7 @@ log = logging.getLogger(__name__)
 class BackupMonkey(object):
     def __init__(self, region, max_snapshots_per_volume, tags, reverse_tags, label, cross_account_number, cross_account_role):
         self._region = region
-        self._prefix = 'BACKUP_MONKEY'
+        self._prefix = 'AUTO_SNAPSHOT'
         if label:
             self._prefix += ' ' + label
         self._snapshots_per_volume = max_snapshots_per_volume
